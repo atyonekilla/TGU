@@ -37,18 +37,16 @@ namespace Ex {
         Math m;
         double f1(double x)
         {
+            double Sum(0);
             for (int k = 1; k <= 8; k++) {
-                valueX += ((std::pow(-1, k) /** std::pow(x, k)*/) / m.factor(k));
+                Sum += ((std::pow(-1, k) * std::pow(x, k)) / m.factor(k));
             }
-            return valueX;
+            return Sum;
         }
         double f2(double x)
         {
             return std::tan(std::pow(M_PI, x));
         }
-    private:
-        double valueX;
-
     };
 }
 int main()
